@@ -1,9 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import status
 from django.core.mail import send_mail
 from .serializers import ContactFormSerializer
 
@@ -14,10 +11,11 @@ class ContactFormView(APIView):
         if serializer.is_valid():
             name = serializer.validated_data['name']
             email = serializer.validated_data['email']
+            phone = serializer.validated_data['phone']
             message = serializer.validated_data['message']
             
             subject = f"Contact Form Submission from {name}"
-            email_message = f"Name : {name}\nEmail : {email}\nMessage :\n{message}"
+            email_message = f"Name : {name}\nEmail : {email}\nPhone : {phone}\nMessage :\n{message}"
 
             try:
                 send_mail(
