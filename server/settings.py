@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'django_filters',
-    'django.contrib.sites',
     #my app
+    'teacher',
+    'academic',
     'contact',
     'book',
     'download',
     'notice',
-    'teacher',
     'student'
 ]
 
