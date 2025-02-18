@@ -46,11 +46,12 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     #my app
+    'teacher',
+    'academic',
     'contact',
     'book',
     'download',
     'notice',
-    'teacher',
     'student'
 ]
 
