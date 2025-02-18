@@ -9,6 +9,8 @@ class TeacherModel(models.Model):
         max_length=16,
         validators=[RegexValidator(regex=r'^\+?\d{9,15}$', message='Enter A Valid Phone Number.')]
     )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
