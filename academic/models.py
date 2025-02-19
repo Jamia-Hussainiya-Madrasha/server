@@ -11,3 +11,6 @@ class Academic(models.Model):
 
     def __str__(self):
         return f'{self.class_name} - {self.class_title}'
+    
+    class Meta:
+        verbose_name_plural = 'শিক্ষাবিদগণ'

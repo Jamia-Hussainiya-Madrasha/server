@@ -20,7 +20,7 @@ class RecentNoticeListApiView(generics.ListAPIView):
     queryset = RecentNotice.objects.all()
     serializer_class = RecentNoticeSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter]
-    filterset_fields = ['allNoticeTitle', 'recentNoticeDescription']
+    filterset_fields = ['recentNoticeTitle', 'recentNoticeDescription']
     ordering_fields = ['id']
 
 class RecentNoticeDetailsApiView(generics.RetrieveAPIView):
