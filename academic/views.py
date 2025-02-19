@@ -27,7 +27,7 @@ class AcademicListApiView(generics.ListAPIView):
         response = super().list(request, *args, **kwargs)
         return Response({
             "status": "success",
-            "total_classes": self.queryset.count(),
+            "total_classes": len(response.data["results"]),
             "data": response.data
         })
 
@@ -35,7 +35,7 @@ class AcademicDetailsListApiView(generics.RetrieveAPIView):
     queryset = Academic.objects.all()
     serializer_class = AcademicSerializer
 
-    def get(self, request, *args, **kwargs):
+    def retrieve(self, request, *args, **kwargs):
         try:
             instance = self.get_object()
             serializer = self.get_serializer(instance)
