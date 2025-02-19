@@ -49,9 +49,8 @@ INSTALLED_APPS = [
     'teacher',
     'academic',
     'contact',
-    'book',
-    'download',
     'notice',
+    'admission',
 ]
 
 MIDDLEWARE = [
