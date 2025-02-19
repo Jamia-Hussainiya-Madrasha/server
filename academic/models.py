@@ -5,10 +5,7 @@ class Academic(models.Model):
     class_name = models.CharField(max_length=100, verbose_name='ক্লাসের নাম')
     class_title = models.CharField(max_length=100, verbose_name='ক্লাসের একটি টাইটেল')
     class_description = models.CharField(max_length=1000, verbose_name='ক্লাসের সম্পর্কে বিস্তারিত')
-    class_name = models.CharField(max_length=100)
-    class_title = models.CharField(max_length=100)
-    class_description = models.CharField(max_length=1000)
-    student_count  = models.IntegerField(default=0)
+    student_count  = models.IntegerField(default=0, verbose_name='ছাত্রদের গগণা')
     class_created = models.DateTimeField(auto_now_add=True)
     class_update = models.DateTimeField(auto_now=True)
 
