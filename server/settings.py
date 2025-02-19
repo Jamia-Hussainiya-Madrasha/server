@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'book',
     'download',
     'notice',
-    'student'
 ]
 
 MIDDLEWARE = [
