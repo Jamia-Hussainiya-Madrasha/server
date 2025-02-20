@@ -18,11 +18,10 @@ class ContactFormView(APIView):
 
             subject = f"Contact Form Submission from {name}"
             email_message = f"""
-            Name: {name}
-            Email: {email}
-            Phone: {phone}
-           
-            Message:
+            Name : {name}
+            Email : {email}
+            Phone : {phone}
+            Message :
             {message}
             """
             try:
