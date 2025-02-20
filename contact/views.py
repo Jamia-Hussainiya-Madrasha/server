@@ -30,7 +30,7 @@ class ContactFormView(APIView):
                     subject,
                     email_message,
                     'noreply@yourdomain.com',  
-                    ['syednazmusshakib94@gmail.com'],
+                    ['jamiyahusainiya1@gmail.com'],
                     fail_silently=False,
                 )
                
