@@ -11,8 +11,8 @@ class Admission(models.Model):
     additional_fee = models.IntegerField(default=100, verbose_name="অতিরিক্ত ফি")
     monthly_fee = models.CharField(max_length=200, verbose_name="মাসিক বেতন")
     
-    admission_start_date = models.CharField(verbose_name="ভর্তি শুরুর তারিখ")
-    admission_end_date = models.CharField(verbose_name="ভর্তি শেষের তারিখ")
+    admission_start_date = models.CharField(max_length=1000, verbose_name="ভর্তি শুরুর তারিখ")
+    admission_end_date = models.CharField(max_length=1000,verbose_name="ভর্তি শেষের তারিখ")
     required_documents = models.TextField(verbose_name="ভর্তির জন্য প্রয়োজনীয় কাগজপত্র")
     seat_availability = models.BooleanField(default=True, verbose_name="আসন ফাঁকা আছে কিনা")
     
