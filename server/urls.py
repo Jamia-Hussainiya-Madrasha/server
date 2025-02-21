@@ -5,10 +5,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('teacher/', include('teacher.urls')),
-    path('academic/', include('academic.urls')),
-    path('contact/', include('contact.urls')),
-    path('notice/', include('notice.urls')),
-    path('admission/', include('admission.urls')),
+    path('api/v1/academic/', include('academic.urls')),
+    path('api/v1/teacher/', include('teacher.urls')),
+    path('api/v1/contact/', include('contact.urls')),
+    path('api/v1/notice/', include('notice.urls')),
+    path('api/v1/admission/', include('admission.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
