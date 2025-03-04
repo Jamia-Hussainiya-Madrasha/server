@@ -55,11 +55,11 @@ INSTALLED_APPS = [
     'django_filters',
     #my app
     'teacher',
-    'academic',
+    'academics',
     'contact',
-    'notice',
-    'admission',
-    'image',
+    'notices',
+    'admissions',
+    'images',
 ]
 
 MIDDLEWARE = [
@@ -172,4 +172,4 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env("EMAIL")
-EMAIL_HOST_PASSWORDS = env("EMAIL_PASSWORDS")
+EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
