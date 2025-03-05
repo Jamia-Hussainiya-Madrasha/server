@@ -1,22 +1,15 @@
 from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
-from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
 from .models import Academic
 from .serializers import AcademicSerializer
 
-class AcademicPagination(PageNumberPagination):
-    page_size = 5
-    page_size_query_param = 'page_size'
-    max_page_size = 100
-
 class AcademicListApiView(generics.ListAPIView):    
     queryset = Academic.objects.all().order_by('id')
     serializer_class = AcademicSerializer
-    pagination_class = AcademicPagination
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ['class_name']
     ordering_fields = ['class_title']
