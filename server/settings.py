@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'admissions',
     'images',
     'gallary',
+    'book',
 ]
 
 MIDDLEWARE = [
