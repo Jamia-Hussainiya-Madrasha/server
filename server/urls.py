@@ -11,5 +11,6 @@ urlpatterns = [
     path('api/v1/notices', include('notices.urls')),
     path('api/v1/admissions', include('admissions.urls')),
     path('api/v1/images', include('images.urls')),
+    path('api/v1/gallary', include('gallary.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
